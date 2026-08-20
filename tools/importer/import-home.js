@@ -170,14 +170,18 @@ function buildUsageDashboard(document, home) {
     promo.append(p);
   }
 
+  const cardTitle = clean(panel.querySelector('.usage-panel-title')?.textContent);
+  const spendLabel = clean(panel.querySelector('.usage-spend-label')?.textContent);
+  const spendValue = clean(panel.querySelector('.usage-spend-value')?.textContent);
+
+  // Container model fields first (promo, cardHeading, spendLabel, spendValue),
+  // then repeated usage-bar item rows [label, value, percent, tone].
   const cells = [['Usage Dashboard']];
   cells.push([promo]);
-
-  // Card title row
-  const cardTitle = clean(panel.querySelector('.usage-panel-title')?.textContent);
   cells.push([cardTitle]);
+  cells.push([spendLabel]);
+  cells.push([spendValue]);
 
-  // Usage bar rows: [label, value, percent, tone]
   [...panel.querySelectorAll('.usage-row')].forEach((row) => {
     const barLabel = clean(row.querySelector('.usage-row-label')?.textContent);
     const barValue = clean(row.querySelector('.usage-row-value')?.textContent);
@@ -186,11 +190,6 @@ function buildUsageDashboard(document, home) {
     const tone = pctEl?.getAttribute('data-tone') || 'brand';
     cells.push([barLabel, barValue, pct, tone]);
   });
-
-  // Spend footer row
-  const spendLabel = clean(panel.querySelector('.usage-spend-label')?.textContent);
-  const spendValue = clean(panel.querySelector('.usage-spend-value')?.textContent);
-  cells.push([spendLabel, spendValue]);
 
   return WebImporter.DOMUtils.createTable(cells, document);
 }

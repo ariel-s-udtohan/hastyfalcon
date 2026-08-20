@@ -7,25 +7,25 @@ function pct(value) {
 export default function decorate(block) {
   const rows = [...block.children];
 
+  // Rows: [0]=promo, [1]=cardHeading, [2]=spendLabel, [3]=spendValue, [4..]=bars
+  const promoRow = rows[0];
+  const cardTitleText = rows[1]?.textContent.trim() || '';
+  const spendLabelText = rows[2]?.textContent.trim() || '';
+  const spendValueText = rows[3]?.textContent.trim() || '';
+  const barRows = rows.slice(4);
+
   // ---- LEFT: promo column ----
   const left = document.createElement('div');
   left.className = 'usage-promo';
-  const intro = rows[0];
-  if (intro) {
-    while (intro.firstElementChild) {
-      const cell = intro.firstElementChild;
-      // move meaningful children out of the cell wrapper
-      while (cell.firstChild) left.append(cell.firstChild);
-      cell.remove();
-    }
-    // first paragraph before the heading is the eyebrow label
+  if (promoRow) {
+    const cell = promoRow.children.length === 1 ? promoRow.firstElementChild : promoRow;
+    while (cell.firstChild) left.append(cell.firstChild);
     const heading = left.querySelector('h1, h2, h3, h4, h5, h6');
     const firstP = left.querySelector('p');
     const firstEl = left.firstElementChild;
     if (firstP && heading && firstP === firstEl) {
       firstP.classList.add('usage-label');
     }
-    // style CTA if present
     const link = left.querySelector('a');
     if (link) link.classList.add('button', 'usage-cta');
   }
@@ -34,23 +34,17 @@ export default function decorate(block) {
   const card = document.createElement('div');
   card.className = 'usage-card';
 
-  // Row 1 = card title
-  const titleRow = rows[1];
-  if (titleRow) {
+  if (cardTitleText) {
     const title = document.createElement('div');
     title.className = 'usage-card-title';
-    title.textContent = titleRow.textContent.trim();
+    title.textContent = cardTitleText;
     card.append(title);
   }
 
   const bars = document.createElement('div');
   bars.className = 'usage-bars';
-
-  // Middle rows = usage bars [label, value, percent, tone]
-  const barRows = rows.slice(2, rows.length - 1);
   barRows.forEach((row) => {
-    const cells = [...row.children].map((c) => c.textContent.trim());
-    const [label, value, percent, tone] = cells;
+    const [label, value, percent, tone] = [...row.children].map((c) => c.textContent.trim());
     const bar = document.createElement('div');
     bar.className = 'usage-bar';
     bar.innerHTML = `
@@ -65,15 +59,12 @@ export default function decorate(block) {
   });
   card.append(bars);
 
-  // Last row = spend footer [label, value]
-  const spendRow = rows[rows.length - 1];
-  if (spendRow && barRows.length) {
-    const cells = [...spendRow.children].map((c) => c.textContent.trim());
+  if (spendLabelText || spendValueText) {
     const footer = document.createElement('div');
     footer.className = 'usage-spend';
     footer.innerHTML = `
-      <span class="usage-spend-label">${cells[0] || ''}</span>
-      <span class="usage-spend-value">${cells[1] || ''}</span>`;
+      <span class="usage-spend-label">${spendLabelText}</span>
+      <span class="usage-spend-value">${spendValueText}</span>`;
     card.append(footer);
   }
 
