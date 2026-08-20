@@ -3,8 +3,36 @@
   <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent">
     <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
       <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
-        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Copyright © 2021 Adobe. All rights reserved.&lt;/p&gt;"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Voltara Energy&lt;/p&gt;&lt;p&gt;100% renewable electricity. Transparent pricing. Employee-owned. Certified B Corp.&lt;/p&gt;&lt;p&gt;Registered in England No. 09123456&lt;br&gt;
+                    Ofgem licence number: E/11/ABCD&lt;/p&gt;"/>
       </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;strong&gt;Products&lt;/strong&gt;&lt;ul&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/services&quot;&gt;Home plans&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/services&quot;&gt;Business energy&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/services&quot;&gt;EV tariff&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/location&quot;&gt;Check availability&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;"/>
+      </section_1>
+      <section_2 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;strong&gt;Company&lt;/strong&gt;&lt;ul&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/about&quot;&gt;About us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/careers&quot;&gt;Careers&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Press&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Sustainability report&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;"/>
+      </section_2>
+      <section_3 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;strong&gt;Support&lt;/strong&gt;&lt;ul&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/contact&quot;&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Help centre&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Report an outage&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Complaints&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;"/>
+      </section_3>
+      <section_4 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;© 2025 Voltara Energy Ltd. All rights reserved.&lt;/p&gt;"/>
+      </section_4>
     </root>
   </jcr:content>
 </jcr:root>
