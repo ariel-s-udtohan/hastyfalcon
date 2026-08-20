@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" label="Service area finder" model="page-header" modelFields="[label,title,subtitle]" name="Page Header" subtitle="&lt;p&gt;We supply to 98% of UK postcodes. Enter yours to see available plans, estimated switch times, and network information.&lt;/p&gt;" title="&lt;p&gt;&lt;h1&gt;Check availability in your area&lt;/h1&gt;&lt;/p&gt;"></block>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" model="outage-banner" modelFields="[text]" name="Outage Banner" text="&lt;p&gt;&lt;strong&gt;Planned maintenance — EG3, EG4 postcodes:&lt;/strong&gt; Network maintenance on 22 Aug 2025, 10pm–2am. No supply interruption expected. &lt;a href&#x3D;&quot;#&quot;&gt;View all notices&lt;/a&gt;&lt;/p&gt;"></block>
+        <block_1 sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="area-finder" name="Area Finder">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Coverage Region" model="coverage-region" modelFields="[region,status,tone]" region="Find your service area"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Coverage Region" model="coverage-region" modelFields="[region,status,tone]" region="England — North" status="Full coverage" tone="full"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Coverage Region" model="coverage-region" modelFields="[region,status,tone]" region="England — South" status="Full coverage" tone="full"></item_2>
+          <item_3 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Coverage Region" model="coverage-region" modelFields="[region,status,tone]" region="Wales" status="Full coverage" tone="full"></item_3>
+          <item_4 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Coverage Region" model="coverage-region" modelFields="[region,status,tone]" region="Scotland" status="Partial (94%)" tone="partial"></item_4>
+          <item_5 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Coverage Region" model="coverage-region" modelFields="[region,status,tone]" region="Northern Ireland" status="Not yet available" tone="none"></item_5>
+        </block_1>
+      </section_1>
+    </root>
+  </jcr:content>
+</jcr:root>

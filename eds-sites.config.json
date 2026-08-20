@@ -1,0 +1,18 @@
+{
+  "edsOrg": "aemsitestrial",
+  "ghOwner": "ariel-s-udtohan",
+  "ghRepo": "hastyfalcon",
+  "aemAuthor": "https://author-p153710-e1614654.adobeaemcloud.com",
+  "sitePrefix": "hastyfalcon60506",
+  "contentRoot": "/content/2026/34/hastyfalcon60506",
+  "baseDomain": "yourdomain.com",
+  "useCDN": false,
+  "techAccount": "ariel.s.udtohan@accenture.com",
+  "adminEmail": "ariel.s.udtohan@accenture.com",
+  "states": [
+    { "name": "Colorado",     "code": "co", "label": "colorado" },
+    { "name": "Michigan",     "code": "mi", "label": "michigan" },
+    { "name": "Texas",        "code": "tx", "label": "texas" }
+  ],
+  "locales": ["en", "fr"]
+}

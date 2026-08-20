@@ -1,0 +1,25 @@
+.outage-banner.block {
+  background: var(--brand-accent-light, #fef3dc);
+  border: 1px solid rgb(245 166 35 / 40%);
+  border-radius: 8px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.outage-banner.block .outage-banner-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.outage-banner.block .outage-banner-content p {
+  margin: 0;
+}
+
+.outage-banner.block a {
+  color: var(--brand, #0b6e4f);
+  font-weight: 600;
+  margin-left: 8px;
+}

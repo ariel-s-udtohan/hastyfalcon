@@ -1,0 +1,60 @@
+.timeline.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline.block .tl-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 20px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.timeline.block .tl-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline.block .tl-dot-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.timeline.block .tl-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--brand, #0b6e4f);
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline.block .tl-item:not(:last-child) .tl-dot::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: calc(100% + 20px);
+  background: var(--brand-border, #e5e7eb);
+  z-index: 0;
+}
+
+.timeline.block .tl-year {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand, #0b6e4f);
+}
+
+.timeline.block .tl-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.timeline.block .tl-desc {
+  font-size: 14px;
+  color: var(--brand-text-secondary, #4b5563);
+}

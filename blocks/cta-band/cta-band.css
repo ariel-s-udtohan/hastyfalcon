@@ -1,0 +1,39 @@
+.cta-band.block {
+  background: var(--brand-light, #e6f4f0);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cta-band.block .cta-band-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.cta-band.block .cta-band-sub {
+  font-size: 14px;
+  color: var(--brand-text-secondary, #4b5563);
+  margin: 0;
+}
+
+.cta-band.block a.button.cta-band-btn {
+  background: var(--brand, #0b6e4f);
+  color: #fff;
+  border: none;
+  padding: 13px 32px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  transition: background 0.15s;
+}
+
+.cta-band.block a.button.cta-band-btn:hover {
+  background: var(--brand-dark, #094f39);
+  text-decoration: none;
+}

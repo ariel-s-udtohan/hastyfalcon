@@ -1,0 +1,114 @@
+.job-listings.block .job-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.job-listings.block .filter-btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--brand-border-strong, #d1d5db);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+  color: var(--brand-text-secondary, #4b5563);
+  transition: background 0.15s, color 0.15s;
+  margin: 0;
+}
+
+.job-listings.block .filter-btn.active {
+  background: var(--brand, #0b6e4f);
+  color: #fff;
+  border-color: var(--brand, #0b6e4f);
+}
+
+.job-listings.block .job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.job-listings.block .job-card {
+  background: #fff;
+  border: 1px solid var(--brand-border, #e5e7eb);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.job-listings.block .job-card:hover {
+  box-shadow: var(--brand-shadow-sm, 0 1px 3px rgb(0 0 0 / 8%));
+  border-color: var(--brand, #0b6e4f);
+}
+
+.job-listings.block .job-title {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.job-listings.block .job-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.job-listings.block .job-tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.job-listings.block .tag-dept {
+  background: var(--brand-light, #e6f4f0);
+  color: var(--brand, #0b6e4f);
+}
+
+.job-listings.block .tag-type {
+  background: var(--brand-accent-light, #fef3dc);
+  color: #92400e;
+}
+
+.job-listings.block .tag-loc {
+  background: #f3f4f6;
+  color: var(--brand-text-secondary, #4b5563);
+}
+
+.job-listings.block .job-desc {
+  font-size: 13px;
+  color: var(--brand-text-secondary, #4b5563);
+  margin-top: 8px;
+}
+
+.job-listings.block .apply-btn {
+  background: var(--brand, #0b6e4f);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+  margin: 0;
+}
+
+.job-listings.block .apply-btn:hover {
+  background: var(--brand-dark, #094f39);
+}
+
+@media (width <= 600px) {
+  .job-listings.block .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
