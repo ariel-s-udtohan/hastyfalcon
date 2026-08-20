@@ -19,6 +19,18 @@
     ]
   },
   {
+    "id": "about-hero",
+    "components": [
+      "about-stat"
+    ]
+  },
+  {
+    "id": "area-finder",
+    "components": [
+      "coverage-region"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
@@ -37,6 +49,60 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "contact-methods",
+    "components": [
+      "contact-method"
+    ]
+  },
+  {
+    "id": "feature-cards",
+    "components": [
+      "feature-card"
+    ]
+  },
+  {
+    "id": "job-listings",
+    "components": [
+      "job"
+    ]
+  },
+  {
+    "id": "metrics",
+    "components": [
+      "metric"
+    ]
+  },
+  {
+    "id": "pricing-plans",
+    "components": [
+      "pricing-plan"
+    ]
+  },
+  {
+    "id": "stats",
+    "components": [
+      "stat"
+    ]
+  },
+  {
+    "id": "team",
+    "components": [
+      "team-member"
+    ]
+  },
+  {
+    "id": "timeline",
+    "components": [
+      "timeline-item"
+    ]
+  },
+  {
+    "id": "values",
+    "components": [
+      "value-item"
     ]
   }
 ]

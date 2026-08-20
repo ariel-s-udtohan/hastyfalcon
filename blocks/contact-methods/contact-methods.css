@@ -1,0 +1,58 @@
+.contact-methods.block .contact-methods-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.contact-methods.block .contact-methods-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-methods.block .contact-method-card {
+  background: #fff;
+  border: 1px solid var(--brand-border, #e5e7eb);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.contact-methods.block .contact-method-name {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.contact-methods.block .contact-method-body {
+  font-size: 14px;
+  color: var(--brand-text-secondary, #4b5563);
+}
+
+.contact-methods.block .contact-method-body p {
+  margin: 0 0 10px;
+}
+
+.contact-methods.block .contact-method-body p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-methods.block .contact-method-body strong {
+  color: var(--brand-text-primary, #111827);
+}
+
+.contact-methods.block a.button.contact-method-btn {
+  background: var(--brand, #0b6e4f);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 4px 0 0;
+  transition: background 0.15s;
+}
+
+.contact-methods.block a.button.contact-method-btn:hover {
+  background: var(--brand-dark, #094f39);
+  text-decoration: none;
+}

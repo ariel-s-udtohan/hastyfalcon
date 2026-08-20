@@ -1,0 +1,42 @@
+.page-header-container {
+  background: var(--brand, #0b6e4f);
+  color: #fff;
+}
+
+.page-header.block {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.page-header.block .page-header-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 60%);
+  margin-bottom: 12px;
+}
+
+.page-header.block .page-header-label p {
+  margin: 0;
+}
+
+.page-header.block .page-header-title h1,
+.page-header.block .page-header-title h2 {
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin: 0 0 16px;
+  color: #fff;
+}
+
+.page-header.block .page-header-subtitle {
+  font-size: 17px;
+  color: rgb(255 255 255 / 70%);
+}
+
+.page-header.block .page-header-subtitle p {
+  margin: 0;
+}

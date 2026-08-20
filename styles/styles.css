@@ -38,6 +38,21 @@
 
   /* nav height */
   --nav-height: 64px;
+
+  /* Voltara brand tokens */
+  --brand: #0b6e4f;
+  --brand-dark: #094f39;
+  --brand-light: #e6f4f0;
+  --brand-accent: #f5a623;
+  --brand-accent-light: #fef3dc;
+  --brand-text-primary: #111827;
+  --brand-text-secondary: #4b5563;
+  --brand-text-muted: #9ca3af;
+  --brand-surface: #f9fafb;
+  --brand-border: #e5e7eb;
+  --brand-border-strong: #d1d5db;
+  --brand-shadow-sm: 0 1px 3px rgb(0 0 0 / 8%), 0 1px 2px rgb(0 0 0 / 4%);
+  --brand-shadow-md: 0 4px 12px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 4%);
 }
 
 /* fallback fonts */
@@ -254,4 +269,104 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/* Voltara — hero section shell (dark gradient wraps hero + metrics) */
+main .section.hero-section {
+  margin: 0;
+}
+
+/* Voltara — feature intro (eyebrow label + big title + subtitle) */
+main .section.section-intro {
+  margin: 0;
+  padding: 72px 0 0;
+}
+
+main .section.section-intro > div > p:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin: 0 0 12px;
+}
+
+main .section.section-intro > div > h2,
+main .section.section-intro > div > h3 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--brand-text-primary);
+  max-width: 640px;
+  margin: 0 0 16px;
+}
+
+main .section.section-intro > div > p:not(:first-child) {
+  font-size: 16px;
+  color: var(--brand-text-secondary);
+  max-width: 560px;
+  margin: 0 0 48px;
+  line-height: 1.7;
+}
+
+/* Voltara — brand-light banded section (e.g. smart metering) */
+main .section.brand-light {
+  background: var(--brand-light);
+  margin: 0;
+  padding: 72px 0;
+}
+
+/* Voltara — plain padded section (page bodies with header banners) */
+main .section.page-body {
+  margin: 0;
+  padding: 72px 0;
+}
+
+/* Voltara — section-level eyebrow label used ahead of blocks */
+main .section.labelled-section > div > p:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin: 0 0 12px;
+}
+
+main .section.labelled-section > div > h2,
+main .section.labelled-section > div > h3 {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--brand-text-primary);
+  margin: 0 0 16px;
+}
+
+/* Voltara — two-column body layout (story | values, etc.) */
+main .section.two-column > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+@media (width <= 768px) {
+  main .section.two-column > div {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Voltara — contact layout (form | methods sidebar) */
+main .section.contact-layout > div {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 64px;
+  align-items: start;
+}
+
+@media (width <= 768px) {
+  main .section.contact-layout > div {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }

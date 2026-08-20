@@ -1,0 +1,11 @@
+{
+  "type": "xwalk",
+  "sites": {
+    "hastyfalcon60506-tx-en": {
+      "previewOrg": "ariel-s-udtohan",
+      "previewSite": "hastyfalcon60506-tx-en",
+      "contentHostUrl": "author-p153710-e1614654.adobeaemcloud.com",
+      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

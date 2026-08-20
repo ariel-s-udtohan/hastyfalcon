@@ -1,0 +1,131 @@
+.pricing-plans.block .pricing-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.pricing-plans.block .plan-card {
+  background: #fff;
+  border: 1px solid var(--brand-border, #e5e7eb);
+  border-radius: 16px;
+  padding: 32px;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.pricing-plans.block .plan-card.featured {
+  border-color: var(--brand, #0b6e4f);
+  border-width: 2px;
+  box-shadow: 0 0 0 4px rgb(11 110 79 / 8%);
+}
+
+.pricing-plans.block .plan-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--brand, #0b6e4f);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.pricing-plans.block .plan-name {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--brand-text-secondary, #4b5563);
+  margin-bottom: 8px;
+}
+
+.pricing-plans.block .plan-price {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--brand-text-primary, #111827);
+  letter-spacing: -2px;
+}
+
+.pricing-plans.block .plan-price p {
+  margin: 0;
+}
+
+.pricing-plans.block .plan-price sup {
+  font-size: 18px;
+  font-weight: 600;
+  vertical-align: super;
+  letter-spacing: 0;
+}
+
+.pricing-plans.block .plan-price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--brand-text-secondary, #4b5563);
+  letter-spacing: 0;
+}
+
+.pricing-plans.block .plan-charge {
+  font-size: 13px;
+  color: var(--brand-text-secondary, #4b5563);
+  margin-top: 4px;
+}
+
+.pricing-plans.block ul.plan-features {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pricing-plans.block ul.plan-features li {
+  font-size: 14px;
+  color: var(--brand-text-secondary, #4b5563);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pricing-plans.block ul.plan-features li::before {
+  content: '✓';
+  width: 18px;
+  height: 18px;
+  background: var(--brand-light, #e6f4f0);
+  color: var(--brand, #0b6e4f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.pricing-plans.block .plan-cta {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  border: 1.5px solid var(--brand, #0b6e4f);
+  color: var(--brand, #0b6e4f);
+  background: transparent;
+  margin: 0;
+}
+
+.pricing-plans.block .plan-cta:hover {
+  background: var(--brand, #0b6e4f);
+  color: #fff;
+}
+
+.pricing-plans.block .plan-card.featured .plan-cta {
+  background: var(--brand, #0b6e4f);
+  color: #fff;
+}
