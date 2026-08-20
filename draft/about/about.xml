@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="about-hero" intro="&lt;p&gt;About Voltara&lt;/p&gt;&lt;p&gt;&lt;h1&gt;Energy for the long haul, not the short gain&lt;/h1&gt;&lt;/p&gt;&lt;p&gt;Voltara was founded in 2014 with a single belief: that supplying energy doesn&#x27;t have to mean exploiting customers. We&#x27;re a B Corp-certified supplier, employee-owned, and committed to net-zero by 2030.&lt;/p&gt;" model="about-hero" modelFields="[intro]" name="About Hero">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="About Stat" model="about-stat" modelFields="[value,label]" value="2014" label="Founded in Manchester"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="About Stat" model="about-stat" modelFields="[value,label]" value="580" label="Team members"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="About Stat" model="about-stat" modelFields="[value,label]" value="B Corp" label="Certified since 2019"></item_2>
+          <item_3 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="About Stat" model="about-stat" modelFields="[value,label]" value="2030" label="Net-zero target"></item_3>
+        </block>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Our story&lt;/p&gt;"/>
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="A decade of doing energy differently" titleType="h2"/>
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="timeline" name="Timeline">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Timeline Item" model="timeline-item" modelFields="[year,title,description]" year="2014" title="Founded in Manchester" description="Three engineers and one mission: supply 100% renewable electricity at a fair price."></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Timeline Item" model="timeline-item" modelFields="[year,title,description]" year="2017" title="100,000 customers reached" description="First supplier to offer half-hourly smart meter data to all residential customers."></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Timeline Item" model="timeline-item" modelFields="[year,title,description]" year="2019" title="B Corp certification" description="Recognised for high standards in social and environmental performance, accountability, and transparency."></item_2>
+          <item_3 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Timeline Item" model="timeline-item" modelFields="[year,title,description]" year="2023" title="Employee ownership trust" description="Transitioned to employee ownership — all 580 team members share in Voltara's success."></item_3>
+          <item_4 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Timeline Item" model="timeline-item" modelFields="[year,title,description]" year="2025" title="2 million customers" description="Expanding into Scotland and launching our EV charging partnership network."></item_4>
+        </block>
+      </section_1>
+      <section_2 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Our values&lt;/p&gt;"/>
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="What we stand for" titleType="h2"/>
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="values" name="Values">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Value" model="value-item" modelFields="[title,description]" title="Radical transparency" description="&lt;p&gt;Every tariff, every charge, every profit margin — we publish it all. You should know exactly what you&#x27;re paying for and why.&lt;/p&gt;"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Value" model="value-item" modelFields="[title,description]" title="Planet-first supply" description="&lt;p&gt;We only buy from renewable generators. Not carbon-offset fossil fuels — actual wind, solar, and hydro power.&lt;/p&gt;"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Value" model="value-item" modelFields="[title,description]" title="Long-term thinking" description="&lt;p&gt;As an employee-owned business, we optimise for decades, not quarters. Our decisions reflect the world our staff will retire into.&lt;/p&gt;"></item_2>
+        </block>
+      </section_2>
+      <section_3 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Leadership&lt;/p&gt;"/>
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="The team running Voltara" titleType="h2"/>
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="team" name="Team">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Sarah Alderton" model="team-member" modelFields="[avatar,name,role]" avatar="SA" role="Chief Executive Officer"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Marcus Kim" model="team-member" modelFields="[avatar,name,role]" avatar="MK" role="Chief Technology Officer"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Priya Osei" model="team-member" modelFields="[avatar,name,role]" avatar="PO" role="Chief Operating Officer"></item_2>
+          <item_3 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Rory Lawson" model="team-member" modelFields="[avatar,name,role]" avatar="RL" role="Head of Sustainability"></item_3>
+        </block>
+      </section_3>
+    </root>
+  </jcr:content>
+</jcr:root>
