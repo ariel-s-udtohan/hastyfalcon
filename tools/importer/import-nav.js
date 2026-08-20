@@ -14,7 +14,7 @@ export default {
     const sections = src.querySelector('.nav-sections');
     const tools = src.querySelector('.nav-tools');
 
-    // Section 1: brand
+    // Section 1: brand — clickable logo image (link wrapping an icon span)
     if (brand) {
       const div = document.createElement('div');
       const p = document.createElement('p');
@@ -22,7 +22,16 @@ export default {
       if (a) {
         const link = document.createElement('a');
         link.href = a.getAttribute('href') || '/';
-        link.textContent = a.textContent.trim();
+        const img = a.querySelector('img');
+        if (img) {
+          // Clickable logo image — survives the markdown round-trip as an image.
+          const logo = document.createElement('img');
+          logo.src = img.getAttribute('src');
+          logo.alt = img.getAttribute('alt') || 'Voltara';
+          link.append(logo);
+        } else {
+          link.textContent = a.textContent.trim();
+        }
         p.append(link);
       }
       div.append(p);

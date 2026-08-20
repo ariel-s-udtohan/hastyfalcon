@@ -147,13 +147,22 @@ header .nav-brand {
 }
 
 header nav .nav-brand a:any-link {
+  display: inline-flex;
+  align-items: center;
   color: var(--brand, #0b6e4f);
   text-decoration: none;
 }
 
+header nav .nav-brand .icon,
+header nav .nav-brand picture {
+  display: inline-flex;
+  height: 28px;
+  width: auto;
+}
+
 header nav .nav-brand img {
-  width: 128px;
-  height: auto;
+  height: 28px;
+  width: auto;
 }
 
 /* sections */
