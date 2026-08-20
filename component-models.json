@@ -142,6 +142,77 @@
     ]
   },
   {
+    "id": "about-hero",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "intro",
+        "value": "",
+        "label": "Intro (label, heading, description)",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "about-stat",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "value",
+        "label": "Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "coverage-region",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "region",
+        "label": "Region",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "status",
+        "label": "Status label",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "tone",
+        "label": "Coverage tone",
+        "value": "full",
+        "options": [
+          {
+            "name": "Full",
+            "value": "full"
+          },
+          {
+            "name": "Partial",
+            "value": "partial"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -180,6 +251,106 @@
     ]
   },
   {
+    "id": "contact-form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Form heading",
+        "value": "Send a message"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subjects",
+        "label": "Subject options (comma separated)",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "contact-method",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Method title",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "value": "",
+        "label": "Details",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "cta-band",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text (heading + description)",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "link",
+        "label": "Button link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkText",
+        "label": "Button text"
+      }
+    ]
+  },
+  {
+    "id": "feature-card",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon (emoji)",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkText",
+        "label": "Link text"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -193,24 +364,366 @@
     "id": "hero",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
+        "name": "badge",
+        "label": "Badge text",
         "value": ""
       },
       {
         "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "subtitle",
+        "value": "",
+        "label": "Subtitle",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "cta_primaryLink",
+        "label": "Primary button link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta_primaryLinkText",
+        "label": "Primary button text"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "cta_ghostLink",
+        "label": "Secondary button link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta_ghostLinkText",
+        "label": "Secondary button text"
+      }
+    ]
+  },
+  {
+    "id": "job",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Job title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "department",
+        "label": "Department",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "type",
+        "label": "Employment type",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "location",
+        "label": "Location",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "metric",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "value",
+        "label": "Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "change",
+        "label": "Change",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "outage-banner",
+    "fields": [
+      {
+        "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Text",
+        "label": "Notice text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "page-header",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Eyebrow label",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "subtitle",
+        "value": "",
+        "label": "Subtitle",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pricing-plan",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "badge",
+        "label": "Badge (leave empty for standard plan)",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "name",
+        "label": "Plan name",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "price",
+        "value": "",
+        "label": "Price",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "charge",
+        "label": "Standing charge",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "features",
+        "value": "",
+        "label": "Features (bulleted list)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta",
+        "label": "Button text",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "stat",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "value",
+        "label": "Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "team-member",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "avatar",
+        "label": "Avatar initials (optional)",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "name",
+        "label": "Name",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "role",
+        "label": "Role",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "timeline-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "year",
+        "label": "Year",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "usage-dashboard",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "promo",
+        "value": "",
+        "label": "Promo content (label, heading, text, CTA)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cardHeading",
+        "label": "Card heading"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spendLabel",
+        "label": "Spend label"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spendValue",
+        "label": "Spend value"
+      }
+    ]
+  },
+  {
+    "id": "usage-bar",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "value",
+        "label": "Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "percent",
+        "label": "Percent (0-100)",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "tone",
+        "label": "Bar tone",
+        "value": "brand",
+        "options": [
+          {
+            "name": "Brand",
+            "value": "brand"
+          },
+          {
+            "name": "Off-peak",
+            "value": "offpeak"
+          },
+          {
+            "name": "Forecast",
+            "value": "forecast"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "value-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description",
         "valueType": "string"
       }
     ]

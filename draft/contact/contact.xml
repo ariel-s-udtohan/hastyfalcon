@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" label="Contact us" model="page-header" modelFields="[label,title,subtitle]" name="Page Header" subtitle="&lt;p&gt;Average response time under 4 hours. Emergency support available 24/7.&lt;/p&gt;" title="&lt;p&gt;&lt;h1&gt;We&#x27;re here when you need us&lt;/h1&gt;&lt;/p&gt;"></block>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" heading="Send a message" model="contact-form" modelFields="[heading,subjects]" name="Contact Form" subjects="Billing query, Switch to Voltara, Smart meter installation, Report an outage, Business enquiry, Complaint, Other"></block>
+        <block_1 sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="contact-methods" name="Contact Methods">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Contact Method" model="contact-method" modelFields="[title,body]" title="Other ways to reach us"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Contact Method" model="contact-method" modelFields="[title,body]" title="📞 Phone support" body="&lt;p&gt;0800 123 4567&lt;br&gt; Mon–Fri 8am–8pm, Sat 9am–5pm&lt;/p&gt;"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Contact Method" model="contact-method" modelFields="[title,body]" title="💬 Live chat" body="&lt;p&gt;Average wait: 90 seconds&lt;br&gt; &lt;a href&#x3D;&quot;#&quot;&gt;Start chat&lt;/a&gt;&lt;/p&gt;"></item_2>
+          <item_3 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Contact Method" model="contact-method" modelFields="[title,body]" title="🚨 Emergency — gas escape" body="&lt;p&gt;If you smell gas, call National Gas immediately:&lt;br&gt; &lt;strong&gt;0800 111 999&lt;/strong&gt; (24/7)&lt;/p&gt;"></item_3>
+          <item_4 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Contact Method" model="contact-method" modelFields="[title,body]" title="🏢 Head office" body="&lt;p&gt;12 Deansgate Square&lt;br&gt; Manchester, M3 4LQ&lt;/p&gt;"></item_4>
+        </block_1>
+      </section_1>
+    </root>
+  </jcr:content>
+</jcr:root>

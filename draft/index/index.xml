@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" badge="98.9% uptime across all regions" cta_ghostLink="#" cta_ghostLinkText="View plans" cta_primaryLink="#" cta_primaryLinkText="Check your area" heading="&lt;p&gt;&lt;h1&gt;Energy that works as hard as you do&lt;/h1&gt;&lt;/p&gt;" model="hero" modelFields="[badge,heading,subtitle,cta_primaryLink,cta_primaryLinkText,cta_ghostLink,cta_ghostLinkText]" name="Hero" subtitle="&lt;p&gt;Transparent pricing, renewable-first supply, and real-time usage insights — built for homes and businesses across the UK.&lt;/p&gt;"></block>
+        <block_1 sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="metrics" name="Metrics">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Metric" model="metric" modelFields="[value,label,change]" value="£0.24" label="Current rate / kWh" change="↓ 3.2% vs last month"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Metric" model="metric" modelFields="[value,label,change]" value="84%" label="Renewable mix today" change="↑ 12% vs avg"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Metric" model="metric" modelFields="[value,label,change]" value="2.1M" label="Active customers" change="+14k this month"></item_2>
+        </block_1>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="stats" name="Stats">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Stat" model="stat" modelFields="[value,label]" value="£340" label="Avg. annual saving vs big six"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Stat" model="stat" modelFields="[value,label]" value="4.8★" label="Trustpilot rating"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Stat" model="stat" modelFields="[value,label]" value="100%" label="Renewable electricity"></item_2>
+          <item_3 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Stat" model="stat" modelFields="[value,label]" value="24/7" label="Emergency support"></item_3>
+        </block>
+      </section_1>
+      <section_2 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Why Voltara&lt;/p&gt;"/>
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Energy made simple, honest, and green" titleType="h2"/>
+        <text_1 sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;No exit fees. No bill shock. No asterisks. Just fair energy at a fair price, powered by wind, solar, and hydro.&lt;/p&gt;"/>
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="feature-cards" name="Feature Cards">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Feature Card" model="feature-card" modelFields="[icon,title,text,link,linkText]" icon="⚡" title="Fixed-rate plans" text="&lt;p&gt;Lock in your rate for 12 or 24 months. No surprises, no mid-contract hikes. Your bill stays predictable however the wholesale market moves.&lt;/p&gt;" link="#" linkText="Explore plans"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Feature Card" model="feature-card" modelFields="[icon,title,text,link,linkText]" icon="🌿" title="100% green electricity" text="&lt;p&gt;Every unit you use is matched by a certificate from a UK renewable source — wind, solar, or hydro. Carbon-neutral supply as standard.&lt;/p&gt;" link="#" linkText="How it works"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Feature Card" model="feature-card" modelFields="[icon,title,text,link,linkText]" icon="📊" title="Real-time usage dashboard" text="&lt;p&gt;Half-hourly smart meter data, spend forecasts, and personalised tips to cut consumption — all in your account portal or mobile app.&lt;/p&gt;" link="#" linkText="See dashboard"></item_2>
+          <item_3 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Feature Card" model="feature-card" modelFields="[icon,title,text,link,linkText]" icon="📍" title="Check service availability" text="&lt;p&gt;Enter your postcode to see which plans are available in your area and get an instant, obligation-free quote.&lt;/p&gt;" link="#" linkText="Find your area"></item_3>
+        </block>
+      </section_2>
+      <section_3 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" cardHeading="TODAY'S USAGE — 14 Aug 2025" filter="usage-dashboard" model="usage-dashboard" modelFields="[promo,cardHeading,spendLabel,spendValue]" name="Usage Dashboard" promo="&lt;p&gt;Smart metering&lt;/p&gt;&lt;p&gt;&lt;h2&gt;Your meter. Your data. Your control.&lt;/h2&gt;&lt;/p&gt;&lt;p&gt;Voltara installs second-generation smart meters free of charge. View your consumption every 30 minutes, set budget alerts, and get auto-submissions — no more estimated bills.&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Book a free installation&lt;/a&gt;&lt;/p&gt;" spendLabel="Daily spend so far" spendValue="£1.20">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Usage Bar" model="usage-bar" modelFields="[label,value,percent,tone]" label="Peak (7–9am)" value="3.2 kWh — £0.77" percent="80" tone="brand"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Usage Bar" model="usage-bar" modelFields="[label,value,percent,tone]" label="Off-peak (9am–4pm)" value="1.8 kWh — £0.43" percent="45" tone="offpeak"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Usage Bar" model="usage-bar" modelFields="[label,value,percent,tone]" label="Evening (4–10pm)" value="Forecast: 4.1 kWh" percent="30" tone="forecast"></item_2>
+        </block>
+      </section_3>
+    </root>
+  </jcr:content>
+</jcr:root>

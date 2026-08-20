@@ -1,0 +1,66 @@
+.feature-cards.block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.feature-cards.block .feature-card {
+  background: #fff;
+  border: 1px solid var(--brand-border, #e5e7eb);
+  border-radius: 16px;
+  padding: 28px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-cards.block .feature-card:hover {
+  box-shadow: var(--brand-shadow-md, 0 4px 12px rgb(0 0 0 / 8%), 0 2px 4px rgb(0 0 0 / 4%));
+  transform: translateY(-2px);
+}
+
+.feature-cards.block .feature-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--brand-light, #e6f4f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.feature-cards.block .feature-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--brand-text-primary, #111827);
+}
+
+.feature-cards.block .feature-card-body {
+  font-size: 14px;
+  color: var(--brand-text-secondary, #4b5563);
+  line-height: 1.6;
+}
+
+.feature-cards.block .feature-card-body p {
+  margin: 0;
+}
+
+.feature-cards.block a.feature-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand, #0b6e4f);
+  margin-top: 16px;
+}
+
+.feature-cards.block a.feature-card-link:hover {
+  text-decoration: none;
+}
