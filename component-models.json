@@ -377,44 +377,6 @@
     ]
   },
   {
-    "id": "feature-card",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "icon",
-        "label": "Icon (emoji)",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Title",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Description",
-        "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "linkText",
-        "label": "Link text"
-      }
-    ]
-  },
-  {
     "id": "fragment",
     "fields": [
       {
