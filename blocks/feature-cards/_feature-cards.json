@@ -41,21 +41,24 @@
           "valueType": "string",
           "name": "label",
           "label": "Label",
-          "value": ""
+          "value": "",
+          "required": true
         },
         {
           "component": "text",
           "valueType": "string",
           "name": "title",
           "label": "Title",
-          "value": ""
+          "value": "",
+          "required": true
         },
         {
           "component": "richtext",
           "name": "subtitle",
           "value": "",
           "label": "Subtitle",
-          "valueType": "string"
+          "valueType": "string",
+          "required": true
         }
       ]
     },
