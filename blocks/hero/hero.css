@@ -1,12 +1,15 @@
+.hero-container {
+  background: linear-gradient(135deg, #0b6e4f 0%, #094f39 60%, #052e22 100%); 
+  padding: 100px 24px 80px;
+}
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
 }
 
 .hero.block {
-  background: linear-gradient(135deg, #0b6e4f 0%, #094f39 60%, #052e22 100%);
   color: #fff;
-  padding: 100px 24px 80px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -61,6 +64,12 @@
 
 .hero.block .hero-badge p {
   margin: 0;
+}
+
+.hero.block .hero-badge > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .hero.block .hero-badge-dot {
