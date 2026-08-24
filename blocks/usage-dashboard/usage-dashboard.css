@@ -2,6 +2,10 @@
   background: var(--brand-light, #e6f4f0);
 }
 
+.section.usage-dashboard-container {
+  padding: 72px 0;
+}
+
 .usage-dashboard-wrapper {
   max-width: 1200px;
   margin: 0 auto;
