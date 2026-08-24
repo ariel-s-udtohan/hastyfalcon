@@ -1,3 +1,5 @@
+import { moveInstrumentation } from '../../scripts/scripts.js';
+
 function pct(value) {
   const n = parseInt(value, 10);
   if (Number.isNaN(n)) return 0;
@@ -46,6 +48,9 @@ export default function decorate(block) {
   barRows.forEach((row) => {
     const [label, value, percent, tone] = [...row.children].map((c) => c.textContent.trim());
     const bar = document.createElement('div');
+
+    moveInstrumentation(row, bar);
+
     bar.className = 'usage-bar';
     bar.innerHTML = `
       <div class="usage-bar-head">
