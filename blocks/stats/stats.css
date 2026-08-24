@@ -1,6 +1,7 @@
 .stats-container {
   background: #fff;
   border-bottom: 1px solid var(--brand-border, #e5e7eb);
+  margin: 0 auto;
 }
 
 .stats.block {
