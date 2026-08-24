@@ -50,7 +50,11 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "metrics",
+        "stats",
+        "feature-cards",
+        "usage-dashboard"
       ]
     }
   ]
