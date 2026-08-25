@@ -164,7 +164,7 @@ async function getAndApplyRenderDecisions() {
 // Initialise immediately — promise is awaited in loadEager
 const alloyLoadedPromise = initWebSDK('./alloy.js', {
   datastreamId: 'd899f130-bab1-43e9-9646-56d2d336d665',
-  orgId: 'OCEB60F754C7E06B0A4C98A2@AdobeOrg',
+  orgId: '0CEB60F754C7E06B0A4C98A2@AdobeOrg',
 });
 
 if (getMetadata('target')) {
