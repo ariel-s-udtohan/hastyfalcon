@@ -10,6 +10,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  getMetadata
 } from './aem.js';
 
 /**
@@ -85,11 +86,124 @@ export function decorateMain(main) {
   decorateBlocks(main);
 }
 
+
+
+function initWebSDK(path, config) {
+  if (!window.alloy) {
+    // eslint-disable-next-line no-underscore-dangle
+    (window.__alloyNS ||= []).push('alloy');
+    window.alloy = (...args) => new Promise((resolve, reject) => {
+      window.setTimeout(() => {
+        window.alloy.q.push([resolve, reject, args]);
+      });
+    });
+    window.alloy.q = [];
+  }
+  return new Promise((resolve) => {
+    import(path)
+      .then(() => window.alloy('configure', config))
+      .then(resolve);
+  });
+}
+
+function onDecoratedElement(fn) {
+  // Run immediately if blocks already decorated
+  if (document.querySelector(
+    '[data-block-status="loaded"],[data-section-status="loaded"]'
+  )) fn();
+
+  const observer = new MutationObserver((mutations) => {
+    if (mutations.some((m) =>
+      m.target.tagName === 'BODY'
+      || m.target.dataset.sectionStatus === 'loaded'
+      || m.target.dataset.blockStatus === 'loaded'
+    )) fn();
+  });
+  observer.observe(document.querySelector('main'), {
+    subtree: true, attributes: true,
+    attributeFilter: ['data-block-status', 'data-section-status'],
+  });
+  observer.observe(document.querySelector('body'), { childList: true });
+}
+
+function toCssSelector(selector) {
+  return selector.replace(
+    /(\.\S+)?:eq\((\d+)\)/g,
+    (_, clss, i) => `:nth-child(${Number(i) + 1}${clss ? ` of ${clss})` : ''}`
+  );
+}
+
+async function getElementForProposition(proposition) {
+  const selector = proposition.data.prehidingSelector
+    || toCssSelector(proposition.data.selector);
+  return document.querySelector(selector);
+}
+
+async function getAndApplyRenderDecisions() {
+  // Fetch decisions without auto-rendering —
+  // so we can control timing relative to block decoration
+  const response = await window.alloy('sendEvent', { renderDecisions: false });
+  const { propositions } = response;
+  onDecoratedElement(async () => {
+    await window.alloy('applyPropositions', { propositions });
+    // Remove applied DOM-action items to avoid double-application
+    propositions.forEach((p) => {
+      p.items = p.items.filter((i) =>
+        i.schema !== 'https://ns.adobe.com/personalization/dom-action'
+        || !getElementForProposition(i)
+      );
+    });
+  });
+
+  // Defer impression reporting — avoids long tasks on LCP
+  window.setTimeout(() => {
+    window.alloy('sendEvent', {
+      xdm: {
+        eventType: 'decisioning.propositionDisplay',
+        _experience: { decisioning: { propositions } },
+      },
+    });
+  });
+}
+
+// Initialise immediately — promise is awaited in loadEager
+let alloyLoadedPromise = initWebSDK('./alloy.js', {
+  datastreamId: '/* YOUR DATASTREAM ID */',
+  orgId: '/* YOUR IMS ORG ID — format: XXXXXXXX@AdobeOrg */',
+});
+
+if (getMetadata('target')) {
+  alloyLoadedPromise.then(() => getAndApplyRenderDecisions());
+}
+
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
+
+  // ... existing code above ...
+  const main = doc.querySelector('main');
+  if (main) {
+    decorateMain(main);
+    document.body.classList.add('appear');
+
+    // Wait for alloy to configure — happens before first paint
+    await alloyLoadedPromise;
+
+    // Break up long tasks to reduce TBT before showing LCP block
+    await new Promise((res) => {
+      window.setTimeout(async () => {
+        // Newer boilerplate:
+        await loadSection(main.querySelector('.section'), waitForFirstImage);
+        // Older boilerplate — use this instead:
+        // await waitForLCP(LCP_BLOCKS);
+        res();
+      }, 0);
+    });
+  }
+  // ... rest of existing loadEager ...
+
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
