@@ -10,7 +10,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
-  getMetadata
+  getMetadata,
 } from './aem.js';
 
 /**
@@ -86,8 +86,6 @@ export function decorateMain(main) {
   decorateBlocks(main);
 }
 
-
-
 function initWebSDK(path, config) {
   if (!window.alloy) {
     // eslint-disable-next-line no-underscore-dangle
@@ -109,18 +107,17 @@ function initWebSDK(path, config) {
 function onDecoratedElement(fn) {
   // Run immediately if blocks already decorated
   if (document.querySelector(
-    '[data-block-status="loaded"],[data-section-status="loaded"]'
+    '[data-block-status="loaded"],[data-section-status="loaded"]',
   )) fn();
 
   const observer = new MutationObserver((mutations) => {
-    if (mutations.some((m) =>
-      m.target.tagName === 'BODY'
+    if (mutations.some((m) => m.target.tagName === 'BODY'
       || m.target.dataset.sectionStatus === 'loaded'
-      || m.target.dataset.blockStatus === 'loaded'
-    )) fn();
+      || m.target.dataset.blockStatus === 'loaded')) fn();
   });
   observer.observe(document.querySelector('main'), {
-    subtree: true, attributes: true,
+    subtree: true,
+    attributes: true,
     attributeFilter: ['data-block-status', 'data-section-status'],
   });
   observer.observe(document.querySelector('body'), { childList: true });
@@ -129,7 +126,7 @@ function onDecoratedElement(fn) {
 function toCssSelector(selector) {
   return selector.replace(
     /(\.\S+)?:eq\((\d+)\)/g,
-    (_, clss, i) => `:nth-child(${Number(i) + 1}${clss ? ` of ${clss})` : ''}`
+    (_, clss, i) => `:nth-child(${Number(i) + 1}${clss ? ` of ${clss})` : ''}`,
   );
 }
 
@@ -148,10 +145,8 @@ async function getAndApplyRenderDecisions() {
     await window.alloy('applyPropositions', { propositions });
     // Remove applied DOM-action items to avoid double-application
     propositions.forEach((p) => {
-      p.items = p.items.filter((i) =>
-        i.schema !== 'https://ns.adobe.com/personalization/dom-action'
-        || !getElementForProposition(i)
-      );
+      p.items = p.items.filter((i) => i.schema !== 'https://ns.adobe.com/personalization/dom-action'
+        || !getElementForProposition(i));
     });
   });
 
@@ -167,9 +162,9 @@ async function getAndApplyRenderDecisions() {
 }
 
 // Initialise immediately — promise is awaited in loadEager
-let alloyLoadedPromise = initWebSDK('./alloy.js', {
-  datastreamId: '/* YOUR DATASTREAM ID */',
-  orgId: '/* YOUR IMS ORG ID — format: XXXXXXXX@AdobeOrg */',
+const alloyLoadedPromise = initWebSDK('./alloy.js', {
+  datastreamId: 'd899f130-bab1-43e9-9646-56d2d336d665',
+  orgId: 'OCEB60F754C7E06B0A4C98A2@AdobeOrg',
 });
 
 if (getMetadata('target')) {
@@ -181,12 +176,13 @@ if (getMetadata('target')) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
-
-  // ... existing code above ...
+  document.documentElement.lang = 'en';
+  decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
+    // await loadSection(main.querySelector('.section'), waitForFirstImage);
 
     // Wait for alloy to configure — happens before first paint
     await alloyLoadedPromise;
@@ -201,16 +197,6 @@ async function loadEager(doc) {
         res();
       }, 0);
     });
-  }
-  // ... rest of existing loadEager ...
-
-  document.documentElement.lang = 'en';
-  decorateTemplateAndTheme();
-  const main = doc.querySelector('main');
-  if (main) {
-    decorateMain(main);
-    document.body.classList.add('appear');
-    await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
 
   try {
