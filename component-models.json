@@ -26,9 +26,7 @@
         "valueType": "boolean",
         "name": "target",
         "label": "Adobe Target",
-        "description": "Check to enable Adobe Target personalisation on this page.",
-        "value": "on",
-        "uncheckedValue": ""
+        "description": "Check to enable Adobe Target personalisation on this page."
       }
     ]
   },
