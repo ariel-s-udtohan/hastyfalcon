@@ -23,11 +23,21 @@
           "label": "Keywords"
         },
         {
-          "component": "checkbox",
-          "valueType": "boolean",
+          "component": "select",
+          "valueType": "string",
           "name": "target",
           "label": "Adobe Target",
-          "description": "Check to enable Adobe Target personalisation on this page."
+          "description": "Enable Adobe Target personalisation on this page.",
+          "options": [
+            {
+              "name": "Disabled (default)",
+              "value": ""
+            },
+            {
+              "name": "Enabled",
+              "value": "on"
+            }
+          ]
         }
       ]
     }
