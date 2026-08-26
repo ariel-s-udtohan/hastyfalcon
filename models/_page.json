@@ -21,6 +21,15 @@
           "name": "keywords",
           "multi": true,
           "label": "Keywords"
+        },
+        {
+          "component": "checkbox",
+          "valueType": "boolean",
+          "name": "target",
+          "label": "Adobe Target",
+          "description": "Check to enable Adobe Target personalisation on this page.",
+          "value": "on",            
+          "uncheckedValue": ""     
         }
       ]
     }
